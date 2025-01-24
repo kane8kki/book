@@ -26,7 +26,7 @@
                         <div class="entry">
                             <button class="toggle-details"><</button>
                             <h3>Project Name</h3>
-                            <p class=".short-description">Short description of the project.</p>
+                            <p class="short-description">Short description of the project.</p>
                             <div class="details" style="display: none;">
                                 <p>Extended details about the project.</p>
                                 <img src="example.jpg" alt="Project Screenshot" />
@@ -39,7 +39,7 @@
                         <div class="entry">
                             <button class="toggle-details"><</button>
                             <h3>Another Project</h3>
-                            <p class=".short-description">Short description of another project.</p>
+                            <p class="short-description">Short description of another project.</p>
                             <div class="details" style="display: none;">
                                 <p>Extended details about this other project.</p>
                                 <img src="example2.jpg" alt="Project Screenshot" />
@@ -60,7 +60,7 @@
             body.classList.toggle('dark-mode');
         });
 
-        const toggles = document.querySelectorAll('toggle-details');
+        const toggles = document.querySelectorAll('.toggle-details');
         toggles.forEach(toggle => {
             toggle.addEventListener('click', () => {
                 const entry = toggle.parentElement;
