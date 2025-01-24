@@ -1,0 +1,219 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f6f8fa;
+    color: #24292e;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #0d1117;
+    color: #c9d1d9;
+}
+
+/* Container */
+#container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.dark-mode .header {
+    border-bottom: 1px solid #30363d;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Theme Switch */
+.theme-switch {
+    display: inline-flex;
+    align-items: center;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.theme-switch .slider {
+    width: 40px;
+    height: 20px;
+    background-color: #d1d5da;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.theme-switch .slider:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+input:checked + .slider {
+    background-color: #2f81f7;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* Content */
+.content {
+    padding: 20px 0;
+}
+
+/* Timeline */
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline li {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px 0;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.dark-mode .timeline li {
+    border-bottom: 1px solid #30363d;
+}
+
+.timeline .date {
+    font-weight: bold;
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.timeline .entry {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.timeline .entry h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    color: #0366d6;
+}
+
+.dark-mode .timeline .entry h3 {
+    color: #58a6ff;
+}
+
+.timeline .entry p {
+    margin: 0;
+    font-size: 14px;
+    color: #586069;
+}
+
+.dark-mode .timeline .entry p {
+    color: #8b949e;
+}
+
+/* Toggle Button */
+.toggle-details {
+    background-color: #f0f4f8; /* Arrière-plan clair */
+    border: 1px solid #d1d5da; /* Bordure discrète */
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 14px; /* Taille de police plus petite */
+    font-weight: bold; /* Texte en gras */
+    cursor: pointer;
+    color: #24292e; /* Couleur du texte */
+    padding: 4px 8px; /* Espacement interne */
+    margin-right: 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s ease;
+}
+
+.dark-mode .toggle-details {
+    background-color: #21262d;
+    border: 1px solid #30363d;
+    color: #c9d1d9;
+}
+
+.toggle-details:hover {
+    background-color: #0366d6; /* Arrière-plan au survol */
+    color: #ffffff; /* Couleur du texte au survol */
+    transform: scale(1.1); /* Zoom léger */
+}
+
+.dark-mode .toggle-details:hover {
+    background-color: #58a6ff;
+}
+
+/* Focus state */
+.toggle-details:focus {
+    outline: 2px solid #0366d6; /* Met en évidence le focus */
+    outline-offset: 2px;
+}
+
+.dark-mode .toggle-details:focus {
+    outline: 2px solid #58a6ff;
+}
+
+/* Project Details */
+.details {
+    display: none;
+    margin-top: 10px;
+    padding-left: 28px;
+}
+
+.details img {
+    max-width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dark-mode .details a {
+    color: #58a6ff;
+}
+
+.details a:hover {
+    text-decoration: underline;
+}
+.timeline .entry h3 {
+    margin: 0 0 8px; /* Espace de 8px en bas du titre */
+    font-size: 18px;
+    color: #0366d6;
+}
+
+.timeline .entry .short-description {
+    margin-top: 4px; /* Espace supplémentaire entre le titre et la description */
+    font-size: 14px;
+    color: #586069;
+}
+
+.dark-mode .timeline .entry .short-description {
+    color: #8b949e;
+}
+

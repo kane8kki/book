@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <header class="header">
+            <h1>My Book</h1>
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </header>
+
+        <main class="content">
+            <section>
+                <h2>Timeline</h2>
+                <ul class="timeline">
+                    <!-- Replace with your own projects -->
+                    <li>
+                        <span class="date">2023</span>
+                        <div class="entry">
+                            <button class="toggle-details"><</button>
+                            <h3>Project Name</h3>
+                            <p class="short-description">Short description of the project.</p>
+                            <div class="details" style="display: none;">
+                                <p>Extended details about the project.</p>
+                                <img src="example.jpg" alt="Project Screenshot" />
+                                <a href="download-link.zip" download>Download</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="date">2022</span>
+                        <div class="entry">
+                            <button class="toggle-details"><</button>
+                            <h3>Another Project</h3>
+                            <p class="short-description">Short description of another project.</p>
+                            <div class="details" style="display: none;">
+                                <p>Extended details about this other project.</p>
+                                <img src="example2.jpg" alt="Project Screenshot" />
+                                <a href="download-link2.zip" download>Download</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+        });
+
+        const toggles = document.querySelectorAll('.toggle-details');
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const entry = toggle.parentElement;
+                const shortDescription = entry.querySelector('.short-description');
+                const details = entry.querySelector('.details');
+                if (details.style.display === 'none') {
+                    details.style.display = 'block';
+                    shortDescription.style.display = 'none';
+                    toggle.textContent = 'v';
+                } else {
+                    details.style.display = 'none';
+                    shortDescription.style.display = 'block';
+                    toggle.textContent = '<';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
