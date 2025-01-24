@@ -188,7 +188,7 @@ input:checked + .slider:before {
 
 .details a {
     display: inline-block;
-    margin: 110px -10px 10px; 
+    margin: 110px -10px 10px;
     color: #0366d6;
     text-decoration: none;
     font-weight: bold;
@@ -225,6 +225,26 @@ input:checked + .slider:before {
 .timeline .entry .short-descriptionln2 {
     margin-top: 40px; /* Espace supplémentaire entre le titre et la description */
     margin: -50px -80px -40px;
+    font-size: 14px;
+    color: #4d4e4e;
+}
+.dark-mode .timeline .entry .short-descriptionln3 {
+    color: #adb7c3;
+    margin: -90px 120px -80px;
+}
+.timeline .entry .short-descriptionln3 {
+    margin-top: 40px; /* Espace supplémentaire entre le titre et la description */
+    margin: -90px 120px -80px;
+    font-size: 14px;
+    color: #4d4e4e;
+}
+.dark-mode .timeline .entry .short-descriptionln4 {
+    color: #adb7c3;
+    margin: -90px -110px -50px;
+}
+.timeline .entry .short-descriptionln4 {
+    margin-top: 40px; /* Espace supplémentaire entre le titre et la description */
+    margin: -90px -110px -50px;
     font-size: 14px;
     color: #4d4e4e;
 }
