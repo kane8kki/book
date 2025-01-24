@@ -217,3 +217,13 @@ input:checked + .slider:before {
     color: #8b949e;
 }
 
+.img_firstproject {
+    width: 100px; /* Définit la largeur à 300px (modifiable selon vos besoins) */
+    height: auto; /* Maintient les proportions de l'image */
+    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
