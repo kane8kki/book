@@ -202,13 +202,13 @@ input:checked + .slider:before {
     text-decoration: underline;
 }
 .timeline .entry h3 {
-    margin: 0 0 8px; /* Espace de 8px en bas du titre */
+    margin: 0 0 18px; /* Espace de 8px en bas du titre */
     font-size: 18px;
     color: #0366d6;
 }
 
 .timeline .entry .short-description {
-    margin-top: 4px; /* Espace supplémentaire entre le titre et la description */
+    margin-top: -10px; /* Espace supplémentaire entre le titre et la description */
     font-size: 14px;
     color: #586069;
 }
