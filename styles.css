@@ -188,7 +188,7 @@ input:checked + .slider:before {
 
 .details a {
     display: inline-block;
-    margin-top: 10px;
+    margin: 110px -10px 10px; 
     color: #0366d6;
     text-decoration: none;
     font-weight: bold;
@@ -202,28 +202,53 @@ input:checked + .slider:before {
     text-decoration: underline;
 }
 .timeline .entry h3 {
-    margin: 0 0 18px; /* Espace de 8px en bas du titre */
+    margin: 0px 0px 100px; /* Espace de 8px en bas du titre */
     font-size: 18px;
     color: #0366d6;
 }
 
 .timeline .entry .short-description {
-    margin-top: 14px; /* Espace supplémentaire entre le titre et la description */
+    margin-top: 40px; /* Espace supplémentaire entre le titre et la description */
+    margin: -50px -135px 3px;
     font-size: 14px;
-    color: #586069;
+    color: #4d4e4e;
 }
 
 .dark-mode .timeline .entry .short-description {
     color: #8b949e;
+    margin: -50px -135px 3px;
+}
+.dark-mode .timeline .entry .short-descriptionln2 {
+    color: #adb7c3;
+    margin: -50px -80px -40px;
+}
+.timeline .entry .short-descriptionln2 {
+    margin-top: 40px; /* Espace supplémentaire entre le titre et la description */
+    margin: -50px -80px -40px;
+    font-size: 14px;
+    color: #4d4e4e;
+}
+/* Project Details Alignment */
+.details {
+    display: flex; /* Utilise flexbox pour aligner les éléments horizontalement */
+    flex-direction: row; /* Place les éléments sur une rangée */
+    gap: 20px; /* Espacement entre les éléments */
+    margin-top: 10px;
+    padding-left: 28px;
+    align-items: flex-start; /* Aligne les éléments au début verticalement */
 }
 
 .img_firstproject {
-    width: 200px; /* Définit la largeur à 300px (modifiable selon vos besoins) */
-    height: auto; /* Maintient les proportions de l'image */
-    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
+    width: 200px; /* Ajuste la largeur de l'image */
+    height: auto; /* Conserve les proportions */
+    margin: 10px ; /* Supprime les marges par défaut */
+    max-width: 100%;
     margin-top: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
+.details p {
+    margin: 5px 0; /* Ajuste les marges des paragraphes */
+    flex-grow: 1; /* Permet aux descriptions de s'étendre si nécessaire */
+}
