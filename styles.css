@@ -218,7 +218,7 @@ input:checked + .slider:before {
 }
 
 .img_firstproject {
-    width: 100px; /* Définit la largeur à 300px (modifiable selon vos besoins) */
+    width: 200px; /* Définit la largeur à 300px (modifiable selon vos besoins) */
     height: auto; /* Maintient les proportions de l'image */
     max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
     margin-top: 10px;
