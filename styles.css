@@ -208,7 +208,7 @@ input:checked + .slider:before {
 }
 
 .timeline .entry .short-description {
-    margin-top: -10px; /* Espace supplémentaire entre le titre et la description */
+    margin-top: 14px; /* Espace supplémentaire entre le titre et la description */
     font-size: 14px;
     color: #586069;
 }
