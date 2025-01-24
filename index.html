@@ -68,7 +68,30 @@
         </main>
     </div>
 
-    <script></script>
+    <script>const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+        });
+
+        const toggles = document.querySelectorAll('.toggle-details');
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const entry = toggle.parentElement;
+                const shortDescription = entry.querySelector('.short-description');
+                const details = entry.querySelector('.details');
+                if (details.style.display === 'none') {
+                    details.style.display = 'block';
+                    shortDescription.style.display = 'none';
+                    toggle.textContent = 'v';
+                } else {
+                    details.style.display = 'none';
+                    shortDescription.style.display = 'block';
+                    toggle.textContent = '<';
+                }
+            });
+        });</script>
 
 
 </body></html>
