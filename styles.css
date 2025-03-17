@@ -207,18 +207,17 @@ input:checked + .slider:before {
     flex-grow: 1;
 }
 
-.details a {
-    display: inline-block;
-    margin: 10px 0;
+.timeline .entry a {
+    margin: 0 0 8px;
+    font-size: 18px;
     color: #0366d6;
-    text-decoration: none;
-    font-weight: bold;
+	font-weight: bold;
 }
 
-.dark-mode .details a {
+.dark-mode .timeline .entry a {
     color: #58a6ff;
 }
 
-.details a:hover {
+.timeline .entry a:hover {
     text-decoration: underline;
 }
