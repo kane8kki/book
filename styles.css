@@ -109,11 +109,11 @@ input:checked + .slider:before {
 .timeline .entry {
     flex-grow: 1;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
 .timeline .entry h3 {
-    margin: 0 0 5px;
+    margin: 0 0 8px;
     font-size: 18px;
     color: #0366d6;
 }
@@ -132,16 +132,27 @@ input:checked + .slider:before {
     color: #8b949e;
 }
 
+/* Short Descriptions */
+.short-description, .short-descriptionln2, .short-descriptionln3, .short-descriptionln4 {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #4d4e4e;
+}
+
+.dark-mode .short-description, .dark-mode .short-descriptionln2, .dark-mode .short-descriptionln3, .dark-mode .short-descriptionln4 {
+    color: #adb7c3;
+}
+
 /* Toggle Button */
 .toggle-details {
-    background-color: #f0f4f8; /* Arrière-plan clair */
-    border: 1px solid #d1d5da; /* Bordure discrète */
-    border-radius: 4px; /* Coins arrondis */
-    font-size: 14px; /* Taille de police plus petite */
-    font-weight: bold; /* Texte en gras */
+    background-color: #f0f4f8;
+    border: 1px solid #d1d5da;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
-    color: #24292e; /* Couleur du texte */
-    padding: 4px 8px; /* Espacement interne */
+    color: #24292e;
+    padding: 4px 8px;
     margin-right: 10px;
     transition: background-color 0.3s, color 0.3s, transform 0.2s ease;
 }
@@ -153,9 +164,9 @@ input:checked + .slider:before {
 }
 
 .toggle-details:hover {
-    background-color: #0366d6; /* Arrière-plan au survol */
-    color: #ffffff; /* Couleur du texte au survol */
-    transform: scale(1.1); /* Zoom léger */
+    background-color: #0366d6;
+    color: #ffffff;
+    transform: scale(1.1);
 }
 
 .dark-mode .toggle-details:hover {
@@ -164,7 +175,7 @@ input:checked + .slider:before {
 
 /* Focus state */
 .toggle-details:focus {
-    outline: 2px solid #0366d6; /* Met en évidence le focus */
+    outline: 2px solid #0366d6;
     outline-offset: 2px;
 }
 
@@ -177,18 +188,28 @@ input:checked + .slider:before {
     display: none;
     margin-top: 10px;
     padding-left: 28px;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
 }
 
-.details img {
+.details img, .img_firstproject {
+    width: 200px;
+    height: auto;
     max-width: 100%;
     margin-top: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.details p {
+    margin: 5px 0;
+    flex-grow: 1;
+}
+
 .details a {
     display: inline-block;
-    margin: 110px -10px 10px;
+    margin: 10px 0;
     color: #0366d6;
     text-decoration: none;
     font-weight: bold;
@@ -200,75 +221,4 @@ input:checked + .slider:before {
 
 .details a:hover {
     text-decoration: underline;
-}
-.timeline .entry h3 {
-    margin: 0px 0px 100px; /* Espace de 8px en bas du titre */
-    font-size: 18px;
-    color: #0366d6;
-}
-
-.timeline .entry .short-description {
-    margin-top: 40px; /* Espace supplémentaire entre le titre et la description */
-    margin: -50px -135px 3px;
-    font-size: 14px;
-    color: #4d4e4e;
-}
-
-.dark-mode .timeline .entry .short-description {
-    color: #8b949e;
-    margin: -50px -135px 3px;
-}
-.dark-mode .timeline .entry .short-descriptionln2 {
-    color: #adb7c3;
-    margin: -50px -80px -40px;
-}
-.timeline .entry .short-descriptionln2 {
-    margin-top: 40px; /* Espace supplémentaire entre le titre et la description */
-    margin: -50px -80px -40px;
-    font-size: 14px;
-    color: #4d4e4e;
-}
-.dark-mode .timeline .entry .short-descriptionln3 {
-    color: #adb7c3;
-    margin: -90px 120px -80px;
-}
-.timeline .entry .short-descriptionln3 {
-    margin-top: 40px; /* Espace supplémentaire entre le titre et la description */
-    margin: -90px 120px -80px;
-    font-size: 14px;
-    color: #4d4e4e;
-}
-.dark-mode .timeline .entry .short-descriptionln4 {
-    color: #adb7c3;
-    margin: -90px -110px -50px;
-}
-.timeline .entry .short-descriptionln4 {
-    margin-top: 40px; /* Espace supplémentaire entre le titre et la description */
-    margin: -90px -110px -50px;
-    font-size: 14px;
-    color: #4d4e4e;
-}
-/* Project Details Alignment */
-.details {
-    display: flex; /* Utilise flexbox pour aligner les éléments horizontalement */
-    flex-direction: row; /* Place les éléments sur une rangée */
-    gap: 20px; /* Espacement entre les éléments */
-    margin-top: 10px;
-    padding-left: 28px;
-    align-items: flex-start; /* Aligne les éléments au début verticalement */
-}
-
-.img_firstproject {
-    width: 200px; /* Ajuste la largeur de l'image */
-    height: auto; /* Conserve les proportions */
-    margin: 10px ; /* Supprime les marges par défaut */
-    max-width: 100%;
-    margin-top: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.details p {
-    margin: 5px 0; /* Ajuste les marges des paragraphes */
-    flex-grow: 1; /* Permet aux descriptions de s'étendre si nécessaire */
 }
