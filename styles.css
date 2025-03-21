@@ -212,6 +212,7 @@ input:checked + .slider:before {
     font-size: 18px;
     color: #0366d6;
 	font-weight: bold;
+    text-decoration: none;
 }
 
 .dark-mode .timeline .entry a {
@@ -219,5 +220,5 @@ input:checked + .slider:before {
 }
 
 .timeline .entry a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
