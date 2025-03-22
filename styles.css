@@ -211,7 +211,7 @@ input:checked + .slider:before {
     margin: 0 0 8px;
     font-size: 18px;
     color: #0366d6;
-	font-weight: bold;
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -221,4 +221,40 @@ input:checked + .slider:before {
 
 .timeline .entry a:hover {
     text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header h1 {
+        margin-bottom: 10px;
+    }
+
+    .timeline li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline .date {
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    .timeline .entry {
+        width: 100%;
+    }
+
+    .details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .details img, .img_firstproject {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
